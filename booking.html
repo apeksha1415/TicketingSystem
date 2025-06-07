@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Book Tickets</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>TheatreHub</h1>
+  </nav>
+
+  <section style="padding: 40px;">
+    <h2>Book Tickets</h2>
+    <form id="booking-form">
+      <label>Name: <input type="text" required></label><br><br>
+      <label>Email: <input type="email" required></label><br><br>
+      <label>Seats: <input type="number" min="1" max="10" required></label><br><br>
+      <button class="btn" type="submit">Confirm Booking</button>
+    </form>
+    <p id="confirmation" style="color: green; margin-top: 20px;"></p>
+  </section>
+
+  <script>
+    document.getElementById('booking-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('confirmation').innerText = "Booking successful! 🎉";
+    });
+  </script>
+</body>
+</html>
